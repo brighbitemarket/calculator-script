@@ -1,9 +1,18 @@
+<script>
 document.addEventListener("DOMContentLoaded", function () {
+  console.log("Script is running");
+
   const form = document.getElementById("lawnServiceForm");
   const serviceCheckboxes = form.querySelectorAll('input[name="service"]');
   const lotSizeInput = form.querySelector('input[name="lotSize"]');
   const frequencySelect = form.querySelector('select[name="frequency"]');
   const totalPriceDisplay = document.getElementById("totalPrice");
+
+  console.log("Form found: ", form);
+  console.log("Service checkboxes: ", serviceCheckboxes);
+  console.log("Lot size input: ", lotSizeInput);
+  console.log("Frequency select: ", frequencySelect);
+  console.log("Total price display: ", totalPriceDisplay);
 
   const baseLotSize = 0.25;
   const additionalLotCharge = 20;
@@ -49,3 +58,4 @@ document.addEventListener("DOMContentLoaded", function () {
     window.location.href = checkoutUrl;
   });
 });
+</script>
